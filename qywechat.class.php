@@ -127,7 +127,7 @@ class Wechat
 	        is_numeric($key) && $key = "item id=\"$key\"";
 	        $xml    .=  "<$key>";
 	        $xml    .=  ( is_array($val) || is_object($val)) ? self::data_to_xml($val)  : self::xmlSafeStr($val);
-	        list($key, ) = explode(' ', $key);
+
 	        $xml    .=  "</$key>";
 	    }
 	    return $xml;
